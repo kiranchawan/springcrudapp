@@ -29,7 +29,7 @@ public class StudentService {
         public StudentEntity getStudentById(Integer id)
         {
               StudentEntity st = studentRepo.findById(id);
-              retrun st;
+              return st;
         }
 
 
