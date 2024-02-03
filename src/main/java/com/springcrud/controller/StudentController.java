@@ -31,5 +31,20 @@ public class StudentController {
 		List<StudentEntity> liststudent= studentService.getAllStudent();
 		return liststudent;
 	}
+        
+        @DeleteMapping("/deletestudentbyid/{id}")
+	public List<StudentEntity> deleteStudentById(@PathVariable Integer id)
+	{
+		studentService.deleteStudent(id);
+		return "student deleted successfully";
+	}
+
+        @GetMapping("/getStudentById/{id}")
+	public List<StudentEntity> getStudentbasedOnId(@PathVariable Integer id)
+	{
+		StudentEntity student= studentService.getStudentById(id);
+		return student;
+	}
+
 
 }
