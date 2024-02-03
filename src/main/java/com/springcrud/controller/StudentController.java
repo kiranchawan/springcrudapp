@@ -32,4 +32,12 @@ public class StudentController {
 		return liststudent;
 	}
 
+        @GetMapping("/getStudentById/{id}")
+	public List<StudentEntity> getStudentbasedOnId(@PathVariable Integer id)
+	{
+		StudentEntity student= studentService.getStudentById(id);
+		return student;
+	}
+
+
 }
